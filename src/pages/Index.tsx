@@ -17,7 +17,7 @@ const Index = () => {
         <div 
           className="h-[500px] bg-cover bg-center flex items-center"
           style={{ 
-            backgroundImage: 'url(https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80)', 
+            backgroundImage: 'url(https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&q=80)', 
           }}
         >
           <div className="absolute inset-0 hero-gradient"></div>
@@ -95,6 +95,42 @@ const Index = () => {
             {rooms.slice(0, 3).map((room) => (
               <RoomCard key={room.id} room={room} />
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Career Roadmap Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">CSE Career Roadmap</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Core Development</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Full Stack Development</li>
+                <li>• Mobile App Development</li>
+                <li>• Cloud Computing (AWS/Azure)</li>
+                <li>• DevOps Engineering</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Emerging Technologies</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Artificial Intelligence</li>
+                <li>• Machine Learning</li>
+                <li>• Data Science</li>
+                <li>• Blockchain Development</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-4">Specialized Roles</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Cybersecurity Expert</li>
+                <li>• System Architecture</li>
+                <li>• Product Management</li>
+                <li>• Technical Leadership</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

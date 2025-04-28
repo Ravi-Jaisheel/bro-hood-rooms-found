@@ -77,21 +77,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Visit Us</h3>
-                      <p className="text-gray-600">123 Anna Salai</p>
-                      <p className="text-gray-600">Chennai, Tamil Nadu</p>
-                      <p className="text-gray-600">India 600002</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="mr-4 bg-broblue-100 p-3 rounded-full">
-                      <Clock size={24} className="text-broblue-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Business Hours</h3>
-                      <p className="text-gray-600">Monday - Friday: 9AM - 5PM</p>
-                      <p className="text-gray-600">Saturday: 10AM - 2PM</p>
-                      <p className="text-gray-600">Sunday: Closed</p>
+                      <p className="text-gray-600">Near VIIT Main Gate</p>
+                      <p className="text-gray-600">Duvvada, Visakhapatnam</p>
+                      <p className="text-gray-600">Andhra Pradesh 530046</p>
                     </div>
                   </div>
                 </div>
@@ -175,14 +163,14 @@ const Contact = () => {
             <div className="bg-white p-4 rounded-lg shadow-md">
               <div className="aspect-w-16 aspect-h-9">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8797219755384!2d80.2698793!3d13.0437419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52689bb60132bb%3A0x549cf8edf62b60a!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1682539668224!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.458790921138!2d83.16648731478455!3d17.69029998789793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39431389e6973f%3A0x92d9c20395498b51!2sVignan%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1645488735733!5m2!1sen!2sin" 
                   width="100%" 
                   height="450" 
                   style={{ border: 0 }} 
                   allowFullScreen 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="BRO HOOD Location"
+                  title="VIIT Location"
                   className="rounded-lg"
                 ></iframe>
               </div>
