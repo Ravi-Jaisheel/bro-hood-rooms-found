@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -7,14 +6,15 @@ import { Button } from '@/components/ui/button';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <nav className="bg-white py-4 shadow-sm sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
+          <img 
+            src="/logo.png" 
+            alt="BRO HOOD Logo" 
+            className="h-10 mr-2"
+          />
           <h1 className="text-2xl font-bold text-broblue-600">
             BRO <span className="text-broaccent-500">HOOD</span>
           </h1>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <Button 
             variant="ghost" 
             size="icon" 
-            onClick={toggleMenu}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-700"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
