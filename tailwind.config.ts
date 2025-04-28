@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -51,6 +52,30 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				broblue: {
+					50: '#EEF2F7',
+					100: '#D0DCE9',
+					200: '#A0B9D3',
+					300: '#7195BD',
+					400: '#4172A7',
+					500: '#124E91',
+					600: '#1A365D',
+					700: '#102543',
+					800: '#09172B',
+					900: '#040911'
+				},
+				broaccent: {
+					50: '#FFF7ED',
+					100: '#FFEDD5',
+					200: '#FED7AA',
+					300: '#FDBA74',
+					400: '#FB923C',
+					500: '#F97316',
+					600: '#EA580C',
+					700: '#C2410C',
+					800: '#9A3412',
+					900: '#7C2D12'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

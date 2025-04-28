@@ -1,0 +1,247 @@
+
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const { toast } = useToast();
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for contacting us. We'll respond to your inquiry soon.",
+      duration: 5000,
+    });
+    
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
+  
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      <main className="flex-grow">
+        {/* Hero section */}
+        <section className="bg-broblue-600 text-white py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Have questions about finding or listing a room? We're here to help!
+            </p>
+          </div>
+        </section>
+        
+        {/* Contact Form and Info */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Contact Information */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+                
+                <div className="space-y-6">
+                  {/* Email */}
+                  <div className="flex items-start">
+                    <div className="mr-4 bg-broblue-100 p-3 rounded-full">
+                      <Mail size={24} className="text-broblue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Email Us</h3>
+                      <p className="text-gray-600">info@brohood.com</p>
+                      <p className="text-gray-600">support@brohood.com</p>
+                    </div>
+                  </div>
+                  
+                  {/* Phone */}
+                  <div className="flex items-start">
+                    <div className="mr-4 bg-broblue-100 p-3 rounded-full">
+                      <Phone size={24} className="text-broblue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Call Us</h3>
+                      <p className="text-gray-600">(123) 456-7890</p>
+                      <p className="text-gray-600">(123) 456-7891</p>
+                    </div>
+                  </div>
+                  
+                  {/* Address */}
+                  <div className="flex items-start">
+                    <div className="mr-4 bg-broblue-100 p-3 rounded-full">
+                      <MapPin size={24} className="text-broblue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Visit Us</h3>
+                      <p className="text-gray-600">123 Main Street</p>
+                      <p className="text-gray-600">Suite 100</p>
+                      <p className="text-gray-600">New York, NY 10001</p>
+                    </div>
+                  </div>
+                  
+                  {/* Hours */}
+                  <div className="flex items-start">
+                    <div className="mr-4 bg-broblue-100 p-3 rounded-full">
+                      <Clock size={24} className="text-broblue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Business Hours</h3>
+                      <p className="text-gray-600">Monday - Friday: 9AM - 5PM</p>
+                      <p className="text-gray-600">Saturday: 10AM - 2PM</p>
+                      <p className="text-gray-600">Sunday: Closed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Contact Form */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
+                
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-1">
+                      Your Name
+                    </label>
+                    <Input 
+                      id="name"
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      placeholder="Enter your name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-1">
+                      Email Address
+                    </label>
+                    <Input 
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium mb-1">
+                      Subject
+                    </label>
+                    <Input 
+                      id="subject"
+                      type="text"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      required
+                      placeholder="Enter subject"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-1">
+                      Your Message
+                    </label>
+                    <Textarea 
+                      id="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                      placeholder="Enter your message"
+                      className="min-h-[150px]"
+                    />
+                  </div>
+                  
+                  <Button 
+                    type="submit"
+                    className="w-full bg-broblue-600 hover:bg-broblue-700 text-white"
+                  >
+                    <Send size={18} className="mr-2" />
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Map */}
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="bg-white p-4 rounded-lg shadow-md">
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986438646288!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1682539668224!5m2!1sen!2s" 
+                  width="100%" 
+                  height="450" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="BRO HOOD Location"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* FAQ Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            
+            <div className="max-w-3xl mx-auto space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">How do I list my room on BRO HOOD?</h3>
+                <p className="text-gray-600">
+                  To list your room, create an account and click on the "List a Room" button. Follow the steps to add details, photos, and set your price.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">Is it free to search for rooms?</h3>
+                <p className="text-gray-600">
+                  Yes, searching and browsing room listings is completely free. We only charge a small fee when you successfully rent out your room.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">How do I contact room owners?</h3>
+                <p className="text-gray-600">
+                  Each listing has a contact form where you can send a message directly to the room owner. You can also call the provided phone number if available.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">Are the listings verified?</h3>
+                <p className="text-gray-600">
+                  We do our best to verify listings, but we also recommend that renters always view the room in person before making any payments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Contact;
