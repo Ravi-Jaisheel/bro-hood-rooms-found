@@ -1,10 +1,8 @@
-
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SearchBar from '@/components/SearchBar';
-import TestimonialCard from '@/components/TestimonialCard';
-import { testimonials, rooms } from '@/data/roomsData';
+import { rooms } from '@/data/roomsData';
 import RoomCard from '@/components/RoomCard';
 import { Button } from '@/components/ui/button';
 import { MapPin, Bed, Star, Calendar } from 'lucide-react';
@@ -96,28 +94,6 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {rooms.slice(0, 3).map((room) => (
               <RoomCard key={room.id} room={room} />
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">What Our Users Say</h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Join thousands of happy renters who found their perfect rooms through BRO HOOD.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard 
-                key={testimonial.id}
-                name={testimonial.name}
-                image={testimonial.image}
-                occupation={testimonial.occupation}
-                quote={testimonial.quote}
-              />
             ))}
           </div>
         </div>
