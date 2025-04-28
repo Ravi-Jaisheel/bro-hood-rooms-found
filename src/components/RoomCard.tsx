@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Bed, MapPin, Star, Wifi, Car } from 'lucide-react';
+import { Bed, MapPin, Star, Wifi, Car, IndianRupee } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Room } from '@/data/roomsData';
@@ -30,7 +30,8 @@ const RoomCard = ({ room }: RoomCardProps) => {
           className="w-full h-48 object-cover"
         />
         <Badge className="absolute top-3 right-3 bg-broaccent-500">
-          ${room.price}/mo
+          <IndianRupee size={14} className="mr-1" />
+          {room.price.toLocaleString('en-IN')}/mo
         </Badge>
         
         <Badge 

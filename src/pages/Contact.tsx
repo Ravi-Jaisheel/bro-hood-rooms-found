@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -35,7 +34,6 @@ const Contact = () => {
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero section */}
         <section className="bg-broblue-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
@@ -45,53 +43,46 @@ const Contact = () => {
           </div>
         </section>
         
-        {/* Contact Form and Info */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Contact Information */}
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
                 
                 <div className="space-y-6">
-                  {/* Email */}
                   <div className="flex items-start">
                     <div className="mr-4 bg-broblue-100 p-3 rounded-full">
                       <Mail size={24} className="text-broblue-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email Us</h3>
-                      <p className="text-gray-600">info@brohood.com</p>
-                      <p className="text-gray-600">support@brohood.com</p>
+                      <p className="text-gray-600">info@brohood.in</p>
+                      <p className="text-gray-600">support@brohood.in</p>
                     </div>
                   </div>
                   
-                  {/* Phone */}
                   <div className="flex items-start">
                     <div className="mr-4 bg-broblue-100 p-3 rounded-full">
                       <Phone size={24} className="text-broblue-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Call Us</h3>
-                      <p className="text-gray-600">(123) 456-7890</p>
-                      <p className="text-gray-600">(123) 456-7891</p>
+                      <p className="text-gray-600">+91 6969699654</p>
                     </div>
                   </div>
                   
-                  {/* Address */}
                   <div className="flex items-start">
                     <div className="mr-4 bg-broblue-100 p-3 rounded-full">
                       <MapPin size={24} className="text-broblue-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Visit Us</h3>
-                      <p className="text-gray-600">123 Main Street</p>
-                      <p className="text-gray-600">Suite 100</p>
-                      <p className="text-gray-600">New York, NY 10001</p>
+                      <p className="text-gray-600">123 Anna Salai</p>
+                      <p className="text-gray-600">Chennai, Tamil Nadu</p>
+                      <p className="text-gray-600">India 600002</p>
                     </div>
                   </div>
                   
-                  {/* Hours */}
                   <div className="flex items-start">
                     <div className="mr-4 bg-broblue-100 p-3 rounded-full">
                       <Clock size={24} className="text-broblue-600" />
@@ -106,7 +97,6 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* Contact Form */}
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                 
@@ -180,13 +170,12 @@ const Contact = () => {
           </div>
         </section>
         
-        {/* Map */}
         <section className="py-8">
           <div className="container mx-auto px-4">
             <div className="bg-white p-4 rounded-lg shadow-md">
               <div className="aspect-w-16 aspect-h-9">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986438646288!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1682539668224!5m2!1sen!2s" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8797219755384!2d80.2698793!3d13.0437419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52689bb60132bb%3A0x549cf8edf62b60a!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1682539668224!5m2!1sen!2sin" 
                   width="100%" 
                   height="450" 
                   style={{ border: 0 }} 
@@ -201,7 +190,6 @@ const Contact = () => {
           </div>
         </section>
         
-        {/* FAQ Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
